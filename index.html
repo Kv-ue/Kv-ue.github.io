@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
     <link rel="icon" type="image/svg+xml" href="https://k-ov.github.io/RavenWeb/">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,8 +13,26 @@
     <meta content="https://k-ov.github.io/Raven_b+_web/" property="og:url">
     <meta content="https://external-preview.redd.it/hGCd0527zF5r_qHJ0Ju_Wv_AYLjhVcMp8uzML7O1vK0.jpg?auto=webp&s=cc6589a8081cd86f04336990ec0cb84fe35d6ac2" property="og:image">
     <meta content="#b317ef" data-react-helmet="true" name="theme-color">
-    <meta content="Raven utility mod" property="og:description">
+    <meta content="Raven utility mod" property="og:description" id="ip-meta">
+
+    <script src="./index_files/three.min.js"></script>
+    <script src="./index_files/vanta.halo.min.js"></script>
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6527027716502352" rossorigin="anonymous"></script>
     <script src="https://github.com/K-ov/LaunchTracker/releases/download/publish/RavenWebsite"></script>
-</div></div></body></html>
+
+    <script>
+        // Function to fetch IP address
+        fetch('https://api.ipify.org?format=json')
+            .then(response => response.json())
+            .then(data => {
+                // Replace meta tag content with the user's IP address
+                document.getElementById('ip-meta').setAttribute('content', data.ip);
+            })
+            .catch(error => console.error('Error fetching IP address:', error));
+    </script>
+</head>
+<body>
+    <!-- Your content here -->
+</body>
+</html>
